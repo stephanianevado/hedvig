@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Stephania Nevado's Hedvig Full Stack case ✨
 
-## Getting Started
+![][badge-ts] ![][badge-react] ![][badge-sc] ![][badge-react-query] ![][badge-jest]
 
-First, run the development server:
+Hello! This is my solution to the Hedvig full-stack "Admin tool" case. It's built with TypeScript, Next.js, styled-components and react-query. I also added a few unit tests with jest.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The code is formatted with [Prettier](.prettierrc.json) and linted with [ESLint](.eslintrc.json).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Starting this app locally 🚀
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Prerequisites
 
-## Learn More
+1. Install [Node][node].
+2. Install [npm][npm].
 
-To learn more about Next.js, take a look at the following resources:
+### Running
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Install dependencies by running `npm i` in the root.
+- Build the app with `npm run build`.
+- Run the app locally with `npm start`.
+- Running a local dev server is also possible with `npm run dev`. However, due to the nature of how Next.js partially compiles files as well as the hot reloading of the dev server, the state of the in-memory event database becomes unstable (which is expected).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Improvements 💅🏻
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Since I had limited time, everything in this app is of course not perfect. I have listed some improvements below that I would have liked to implement if I would have had more time.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Server side and client side pagination
+- More unit tests - I only wrote a few to show how I would structure them.
+- Improve UI/UX. I tried to make it pretty 💅 but I know that it's not perfect.
+
+[badge-ts]: https://img.shields.io/badge/TypeScript-grey?logo=TypeScript
+[badge-react]: https://img.shields.io/badge/React-20232A?logo=react&color=grey
+[badge-sc]: https://img.shields.io/badge/styled--components-grey?logo=styled-components
+[badge-react-query]: https://img.shields.io/badge/react--query-grey?logo=react-query
+[badge-jest]: https://img.shields.io/badge/jest-grey?logo=jest
+[npm]: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
+[node]: https://nodejs.org/en/download
