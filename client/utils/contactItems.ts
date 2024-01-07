@@ -6,7 +6,7 @@ import {
   Linkedin,
 } from 'client/components/icons/icons'
 
-export enum Id {
+export enum ContactMedium {
   GitHub = 'github',
   Linkedin = 'linkedin',
   Instagram = 'instagram',
@@ -15,31 +15,31 @@ export enum Id {
 }
 
 export const contactItems = {
-  [Id.GitHub]: {
+  [ContactMedium.GitHub]: {
     text: 'Go to my GitHub',
     alternativeText: 'My GitHub',
     href: 'https://github.com/stephanianevado',
     icon: GitHub,
   },
-  [Id.Linkedin]: {
+  [ContactMedium.Linkedin]: {
     text: 'Go to my LinkedIn',
     alternativeText: 'LinkedIn',
     href: 'https://www.linkedin.com/in/stephanianevado/',
     icon: Linkedin,
   },
-  [Id.Instagram]: {
+  [ContactMedium.Instagram]: {
     text: 'Go to my Instagram',
     alternativeText: 'Instagram',
     href: 'https://www.instagram.com/stephanianevado/',
     icon: Instagram,
   },
-  [Id.Facebook]: {
+  [ContactMedium.Facebook]: {
     text: 'Go to my Facebook',
     alternativeText: 'Facebook',
     href: 'https://www.facebook.com/nevadostephania',
     icon: Facebook,
   },
-  [Id.Email]: {
+  [ContactMedium.Email]: {
     text: 'Send me a message',
     alternativeText: `Let's chat`,
     href: 'mailto:stephania.arantxa@gmail.com',

@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server'
 import getCurrentDateFormatted from 'client/utils/getCurrentDateFormatted'
 
 import { ContractEventName } from 'server/contracts/contracts'
-import { inMemoryDb, newId } from 'server/db/inMemoryDb'
+import { inMemoryDb, newContactId } from 'server/db/inMemoryDb'
 
 export type CreateReq = {
   premium: number
@@ -17,21 +17,24 @@ export async function POST(req: Request) {
   const validPremiumValues = [50, 100, 200]
   if (!validPremiumValues.includes(body.premium)) {
     return NextResponse.json(
-      { error: 'Invalid premium value. Valid values are 50, 100, or 200.' },
+      {
+        error: `Invalid premium value. Valid values are ${validPremiumValues}.`,
+      },
       { status: 400 }
     )
   }
 
   const currentDate = getCurrentDateFormatted()
   const startDate = body.startDate
+
   if (startDate < currentDate) {
     return NextResponse.json(
-      { error: 'Invalid startDate. It should be a future date.' },
+      { error: 'Invalid startDate. It must be today or in the future.' },
       { status: 400 }
     )
   }
 
-  const contractId = newId(Object.keys(inMemoryDb.contractEventsById))
+  const contractId = newContactId()
 
   inMemoryDb.contractEventsById[contractId] = [
     {

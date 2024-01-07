@@ -7,8 +7,9 @@ import {
 export function eventsToContracts(eventsById: Record<string, ContractEvent[]>) {
   const contractById: Record<string, Contract> = {}
 
-  Object.entries(eventsById).forEach(([_, events]) => {
-    events.forEach((event) => {
+  Object.values(eventsById)
+    .flat()
+    .forEach((event) => {
       const { name, contractId, premium, startDate, terminationDate } = event
       let contract = contractById[contractId]
 
@@ -41,7 +42,6 @@ export function eventsToContracts(eventsById: Record<string, ContractEvent[]>) {
 
       contractById[contractId] = contract
     })
-  })
 
   return Object.values(contractById)
 }

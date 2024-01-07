@@ -28,9 +28,10 @@ The code is formatted with [Prettier](.prettierrc.json) and linted with [ESLint]
 
 Since I had limited time, everything in this app is of course not perfect. I have listed some improvements below that I would have liked to implement if I would have had more time.
 
-- Server side and client side pagination
+- Server side and client side pagination.
 - More unit tests - I only wrote a few to show how I would structure them.
 - Improve UI/UX. I tried to make it pretty 💅 but I know that it's not perfect.
+- Use an i18n library.
 
 [badge-ts]: https://img.shields.io/badge/TypeScript-grey?logo=TypeScript
 [badge-react]: https://img.shields.io/badge/React-20232A?logo=react&color=grey

@@ -4,7 +4,7 @@ import { Text } from 'client/components/common/text/Text'
 import { Line } from 'client/components/icons/icons'
 import { Breakpoint } from 'client/components/theme/breakpoint'
 import { Theme } from 'client/components/theme/Theme'
-import { contactItems, Id } from 'client/utils/contactItems'
+import { contactItems, ContactMedium } from 'client/utils/contactItems'
 
 export const Footer = () => {
   const currentDate = new Date()
@@ -34,7 +34,7 @@ export const Footer = () => {
       </Text>
       <Spacer size={2} />
       <Box direction="row">
-        {Object.values(Id).map((id) => {
+        {Object.values(ContactMedium).map((id) => {
           const item = contactItems[id]
           const { text, href, icon: Icon } = item
 

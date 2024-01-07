@@ -11,7 +11,7 @@ import { Text } from 'client/components/common/text/Text'
 import { Dash } from 'client/components/icons/icons'
 import { Breakpoint } from 'client/components/theme/breakpoint'
 import { Theme } from 'client/components/theme/Theme'
-import { contactItems, Id } from 'client/utils/contactItems'
+import { contactItems, ContactMedium } from 'client/utils/contactItems'
 
 export default function Home() {
   const {
@@ -53,9 +53,13 @@ export default function Home() {
               [MOBILE_S]: { direction: 'column', alignItems: 'center' },
               [LAPTOP]: { direction: 'row' },
             }}>
-            {Object.values(Id)
+            {Object.values(ContactMedium)
               .filter((id) => {
-                return [Id.GitHub, Id.Linkedin, Id.Email].includes(id)
+                return [
+                  ContactMedium.GitHub,
+                  ContactMedium.Linkedin,
+                  ContactMedium.Email,
+                ].includes(id)
               })
               .map((id) => {
                 const item = contactItems[id]

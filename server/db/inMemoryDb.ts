@@ -8,7 +8,9 @@ export const inMemoryDb: ContactEventStore = {
   contractEventsById: {},
 }
 
-export const newId = (ids: string[]) => {
+export const newContactId = () => {
+  const ids = Object.keys(inMemoryDb.contractEventsById)
+
   if (ids.length === 0) {
     return '1'
   }

@@ -61,9 +61,6 @@ export const StyledButton = styled.button<ButtonProps>`
   font-size: ${(props: ButtonProps) => props.fontSize ?? medium};
   font-weight: ${(props: ButtonProps) => props.fontWeight ?? bold};
   line-height: 1;
-  id: ${(props: ButtonProps) => props.id ?? props.id};
-  name: ${(props: ButtonProps) => props.name ?? ''};
-  type: ${(props: ButtonProps) => props.type ?? props.type};
   color: ${(props: ButtonProps) => props.color ?? tertiaryBlack};
   background-color: ${(props: ButtonProps) =>
     props.bg ?? 'rgba(0, 0, 0, 0.04)'};
@@ -106,9 +103,6 @@ export const StyledButton = styled.button<ButtonProps>`
     },
   };
   cursor: pointer;
-  as: ${(props: ButtonProps) => props.as ?? props.as};
-  href: ${(props: ButtonProps) => props.href ?? props.href};
-  target: ${(props: ButtonProps) => props.target ?? '_blank'};
   ${(props: ButtonProps) => createResponsiveStyle(props.breakpoints)};
 `
 

@@ -7,15 +7,12 @@ import { inMemoryDb } from 'server/db/inMemoryDb'
 
 // Seed the data base
 export async function POST() {
-  let data
-  const db = Object.keys(inMemoryDb.contractEventsById).length
+  if (Object.keys(inMemoryDb.contractEventsById).length) {
+    return NextResponse.json({})
+  }
 
   try {
-    if (db) {
-      return NextResponse.json({})
-    }
-
-    data = readFileSync('./server/db/contractEvents.txt', 'utf8')
+    const data = readFileSync('./server/db/contractEvents.txt', 'utf8')
     const lines = data.split('\n')
     console.log('Started server: reading events from storage...')
 
@@ -34,10 +31,12 @@ export async function POST() {
   } catch (err) {
     console.error(err)
   }
+
   console.log(
     `Successfully stored events for ${
       Object.keys(inMemoryDb.contractEventsById).length
     } contracts`
   )
+
   return NextResponse.json({})
 }
