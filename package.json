@@ -6,7 +6,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "start:dev": "NODE_ENV=development next start",
     "lint": "next lint && npm run lint:eslint && npm run lint:ts",
     "lint:eslint": "npm exec eslint . --quiet",
     "lint:ts": "tsc",
