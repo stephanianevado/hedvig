@@ -2,7 +2,7 @@
 
 const { PHASE_PRODUCTION_SERVER } = require('next/constants')
 
-const APP_BASE_URL = process.env.APP_BASE_URL || 'http://localhost:3000'
+const APP_BASE_URL = process.env.APP_BASE_URL
 
 // This is a workaround to be able to seed the database on server startup.
 // Next.js unfortunately doesn't have a great way to run logic once on startup.
